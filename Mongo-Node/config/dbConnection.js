@@ -3,7 +3,7 @@ var connect = function() {
     return mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        password: '',
+        password: '22903936',
         database: 'portal_noticia'
     });
 }
