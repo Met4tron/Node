@@ -13,6 +13,7 @@ app.use(expressValidator());
 consign().include('app/routes',{cwd: 'app'})
 .then('config/dbConnection.js')
 .then('app/models')
+.then('app/controllers')
 .into(app);
 
 
