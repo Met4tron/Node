@@ -9,15 +9,36 @@
 <body>
 	<h1>Adicionar noticia</h1>
 	<br/>
+	
+		<% if(validacao) { %>
+			<ul>
+				<% for(var i = 0; i < validacao.length; i++) { %>
+					<li>
+						<%= validacao[i].msg %>
+					</li>
+				<% } %>
+			</ul>
+		<% } %>
+
 	<form action="/noticias/salvar" method="post">
 		<label>Titulo</label>
-		<input type="text" name="titulo" id="titulo" placeholder="Titulo da Noticia" />
+		<input type="text" name="titulo" id="titulo" placeholder="Titulo da Noticia" value="<%=noticia.titulo%>"/>
+		<br/>
+		<label>Resumo</label>
+		<input type="text" name="resumo" id="resumo" placeholder="Resumo" value="<%=noticia.resumo%>"/>
+		<br/>
+		<label>Autor</label>
+		<input type="text" name="autor" id="autor" placeholder="Autor" value="<%=noticia.autor%>"/>
+		<br/>
+		<label>Data</label>
+		<input type="date" name="data_noticia" id="data" placeholder="Data" value="<%=noticia.data_noticia%>"/>
 		<br/>
 		<label>Noticia</label>
-		<textarea id="noticia" cols="30" rows="5" name="noticia"></textarea>
+		<textarea id="noticia" cols="30" rows="5" name="noticia" ><%=noticia.noticia%></textarea>
 		<br/>
 		<input type="submit" value="Enviar" />
 	</form>
+
 </body>
 
 </html>

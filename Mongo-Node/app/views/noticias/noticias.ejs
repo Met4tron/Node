@@ -8,16 +8,22 @@
 
 		<h1>Noticias</h1>
 
-		<table>
+		<table border="1px solid black">
 			<tr>
 				<td>ID</td>
 				<td>Titulo</td>
+				<td>Resumo</td>
+				<td>Autor</td>
+				<td>Data Noticia</td>
 			</tr>
 
 			<% for(var i=0; i < noticias.length; i++) { %>
 				<tr>
 					<td><%= noticias[i].id_noticia %></td>
 					<td><%= noticias[i].titulo %></td>
+					<td><%= noticias[i].resumo%></td>
+					<td><%= noticias[i].autor%></td>
+					<td><%= noticias[i].data_noticia%><td>
 				</tr>
 			<% } %>
 		</table>
