@@ -1,6 +1,11 @@
-module.exports = function(){
-  this.lista = function(connection,callback){
-    connection.query('select * from produtos',callback);
-  }
-  return this;
+function ProdutosDAO (connection) {
+  this._connection = connection;
+}
+
+ProdutosDAO.prototype.lista = function  (callback) {
+  this._connection.query('select * from livros', callback);
+}
+
+module.exports = function () {
+  return ProdutosDAO;
 }

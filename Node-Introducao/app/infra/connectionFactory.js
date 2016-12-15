@@ -1,16 +1,16 @@
 const mysql = require('mysql');
 
 //Funcao Anonima
-let connectMYSQL = () => {
+let connectMYSQL = function() {
   return  mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        password: '',
-        database: 'produtos_node'
+        password: '22903936',
+        database: 'casadocodigo_nodejs'
     });
 }
 //Wrapper
-module.exports = () => {
+module.exports = function() {
 
   return connectMYSQL;
 }
