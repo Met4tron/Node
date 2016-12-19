@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulario Promoção</title>
+    <link href="/css/bootstrap-theme.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body>
+
+    <form class="" action="/promocoes" method="post">
+        <div class="">
+            <input type="text" name="mensagem" class="form-control" value="">
+        </div>
+        <div class="form-group">
+            <select name="livro[id]" class="form-control">
+
+          <% for(var i=0; i < lista.length; i++) { %>
+          <option value="<%= lista[i].id %>"><%= lista[i].titulo %></option>
+
+          <%} %>
+        </select>
+        </div>
+        <input type="submit" class="form-control btn btn-primary" value="Cadastro">
+    </form>
+</body>
+
+</html>
